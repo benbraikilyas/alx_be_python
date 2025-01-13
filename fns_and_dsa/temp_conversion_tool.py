@@ -20,7 +20,7 @@ def get_temperature_input():
     """
     while True:
         try:
-            temp_input = input("Enter the temperature to convert : ").strip()
+            temp_input = input("Enter the temperature to convert: ")
             if temp_input.lower() == 'exit':
                 return None
             temperature = float(temp_input)
