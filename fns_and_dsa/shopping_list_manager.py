@@ -7,7 +7,7 @@ def display_menu():
     print("==========================")
 
 def add_item(shopping_list):
-    item = input("Enter item to add: ")
+    item = input("Enter the item to add: ")
     if item:
         shopping_list.append(item)
         print(f"'{item}' has been added to the list.")
