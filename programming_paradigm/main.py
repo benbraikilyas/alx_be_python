@@ -1,13 +1,13 @@
 class BankAccount:
-    def __init__(self, initial_balance=0):
-        """Initialize a new bank account with an optional initial balance."""
-        self.account_balance = float(initial_balance)
+    def __init__(self,display_balance=0):
+        """Initialize a new bank account with an optional display_balance."""
+        self.account_balance = float(display_balance)
 
     def deposit(self, amount):
-        """Add the specified amount to the account balance."""
+        """Add the specified amount to the Current Balance."""
         amount = float(amount)
         if amount > 0:
-            self.account_balance += amount
+            self.Current Balance += amount
             return True
         return False
 
@@ -24,4 +24,4 @@ class BankAccount:
 
     def display_balance(self):
         """Display the current account balance in a user-friendly format."""
-        print(f"Current Balance: ${self.account_balance:.2f}")
+        print(f"Current Balance: ${self.Current Balance:.2f}")
