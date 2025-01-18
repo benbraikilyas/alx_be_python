@@ -34,3 +34,42 @@ class BankAccount:
     def __str__(self):
         """Return a string representation of the account."""
         return f"Account Holder: {self.__account_holder}, Balance: {self.__balance}"
+
+
+
+
+
+from bank_account import BankAccount
+
+def main():
+    # Create a BankAccount object with initial details
+    account = BankAccount("Alice", 100.0)
+
+    print("Welcome to the Bank Account System")
+    print(account)
+
+    while True:
+        print("\nOptions:")
+        print("1. Deposit")
+        print("2. Withdraw")
+        print("3. Check Balance")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            amount = float(input("Enter deposit amount: "))
+            account.deposit(amount)
+        elif choice == "2":
+            amount = float(input("Enter withdrawal amount: "))
+            account.withdraw(amount)
+        elif choice == "3":
+            print(f"Current balance: {account.get_balance()}")
+        elif choice == "4":
+            print("Thank you for using the Bank Account System!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
