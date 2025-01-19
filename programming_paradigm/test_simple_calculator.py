@@ -21,8 +21,6 @@ class SimpleCalculator:
 
 
 
-
-
 import unittest
 from simple_calculator import SimpleCalculator
 
@@ -30,6 +28,22 @@ class TestSimpleCalculator(unittest.TestCase):
     def setUp(self):
         """Set up the SimpleCalculator instance before each test."""
         self.calc = SimpleCalculator()
+
+    def test_addition(self):
+        """Test the addition method with various number combinations."""
+        # Test positive numbers
+        self.assertEqual(self.calc.add(2, 3), 5)
+        self.assertEqual(self.calc.add(0, 5), 5)
+        self.assertEqual(self.calc.add(10, 20), 30)
+        
+        # Test negative numbers
+        self.assertEqual(self.calc.add(-2, -3), -5)
+        self.assertEqual(self.calc.add(-1, 1), 0)
+        self.assertEqual(self.calc.add(0, -5), -5)
+        
+        # Test floating point numbers
+        self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3, places=7)
+        self.assertEqual(self.calc.add(2.5, 3.5), 6.0)
 
     def test_add_positive_numbers(self):
         """Test addition with positive numbers."""
