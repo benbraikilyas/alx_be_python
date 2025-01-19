@@ -62,22 +62,22 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3, places=7)
         self.assertEqual(self.calc.add(2.5, 3.5), 6.0)
 
-    def test_subtract(self):
+    def test_subtraction(self):
         """Test subtraction with positive numbers."""
-        self.assertEqual(self.calc.subtract(5, 3), 2)
-        self.assertEqual(self.calc.subtract(10, 5), 5)
-        self.assertEqual(self.calc.subtract(3, 3), 0)
+        self.assertEqual(self.calc.subtraction(5, 3), 2)
+        self.assertEqual(self.calc.subtraction(10, 5), 5)
+        self.assertEqual(self.calc.subtraction(3, 3), 0)
 
-    def test_subtract(self):
+    def test_subtraction(self):
         """Test subtraction with negative numbers."""
-        self.assertEqual(self.calc.subtract(-2, -3), 1)
-        self.assertEqual(self.calc.subtract(-5, 5), -10)
-        self.assertEqual(self.calc.subtract(0, -5), 5)
+        self.assertEqual(self.calc.subtraction(-2, -3), 1)
+        self.assertEqual(self.calc.subtraction(-5, 5), -10)
+        self.assertEqual(self.calc.subtraction(0, -5), 5)
 
-    def test_subtract(self):
+    def test_subtraction(self):
         """Test subtraction with floating point numbers."""
-        self.assertAlmostEqual(self.calc.subtract(0.3, 0.1), 0.2, places=7)
-        self.assertEqual(self.calc.subtract(5.5, 2.5), 3.0)
+        self.assertAlmostEqual(self.calc.subtraction(0.3, 0.1), 0.2, places=7)
+        self.assertEqual(self.calc.subtraction(5.5, 2.5), 3.0)
 
     def test_multiply(self):
         """Test multiplication with positive numbers."""
