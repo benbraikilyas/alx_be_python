@@ -11,7 +11,7 @@ class Book:
         """
         Destructor that prints a message upon object deletion.
         """
-        print(f"Deleting '{self.title}'")
+        print(f"Deleting {self.title}")
 
     def __str__(self):
         """
