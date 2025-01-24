@@ -23,7 +23,7 @@ class Book:
         """
         Official representation to recreate the Book instance.
         """
-        return f"Book('{self.title}', '{self.author}', {self.year}')"
+        return f"Book('{self.title}', '{self.author}', {self.year})"
 
 
 from book_class import Book
