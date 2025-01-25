@@ -8,7 +8,7 @@ class Book:
     
     def __str__(self):
         """Return a string representation of the book."""
-        return f"{self.title} by {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -21,7 +21,7 @@ class EBook(Book):
     
     def __str__(self):
         """Return a string representation of the ebook."""
-        return f"{super().__str__()} [{self.file_size}KB]"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -34,7 +34,7 @@ class PrintBook(Book):
     
     def __str__(self):
         """Return a string representation of the print book."""
-        return f"{super().__str__()} ({self.page_count} pages)"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -61,30 +61,10 @@ class Library:
         print("-" * 50)
         
         # Group books by type
-        regular_books = [book for book in self.books if type(book) is Book]
-        ebooks = [book for book in self.books if isinstance(book, EBook)]
-        print_books = [book for book in self.books if isinstance(book, PrintBook)]
-        
-        if regular_books:
-            print("\nRegular Books:")
-            for book in regular_books:
-                print(f"  • {book}")
-        
-        if ebooks:
-            print("\nE-Books:")
-            for book in ebooks:
-                print(f"  • {book}")
-        
-        if print_books:
-            print("\nPrint Books:")
-            for book in print_books:
-                print(f"  • {book}")
+        for book in self.books:
+            print(book)
         
         print(f"\nTotal Books: {len(self.books)}")
-
-
-
-
 
 
 from library_system import Book, EBook, PrintBook, Library
@@ -108,3 +88,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
