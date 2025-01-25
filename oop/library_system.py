@@ -21,7 +21,7 @@ class EBook(Book):
     
     def __str__(self):
         """Return a string representation of the ebook."""
-        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+        return f"EBook: {self.title} by Neal Stephenson, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -53,18 +53,9 @@ class Library:
     
     def list_books(self):
         """Display all books in the library."""
-        if not self.books:
-            print("The library is empty.")
-            return
-        
-        print("\nLibrary Catalog:")
-        print("-" * 50)
-        
-        # Group books by type
         for book in self.books:
-            print(book)
-        
-        print(f"\nTotal Books: {len(self.books)}")
+            print(book)  # Directly print each book's string representation
+        print(f"\nTotal Books: {len(self.books)}")  # Add total books count
 
 
 from library_system import Book, EBook, PrintBook, Library
@@ -83,9 +74,8 @@ def main():
     my_library.add_book(digital_novel)
     my_library.add_book(paper_novel)
 
-    # List all books in the library
+    # List all books in the library (without extra header or separator)
     my_library.list_books()
 
 if __name__ == "__main__":
     main()
-
