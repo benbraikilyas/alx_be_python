@@ -55,7 +55,6 @@ class Library:
         """Display all books in the library."""
         for book in self.books:
             print(book)  # Directly print each book's string representation
-        print(f"\nTotal Books: {len(self.books)}")  # Add total books count
 
 
 from library_system import Book, EBook, PrintBook, Library
