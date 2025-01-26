@@ -40,8 +40,8 @@ import math
 
 def main():
     shapes = [
-        Rectangle(10, 5),
-        Circle(7)
+        Rectangle(1 ,34),
+        Circle(2)
     ]
 
     for shape in shapes:
